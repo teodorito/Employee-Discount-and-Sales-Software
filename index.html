@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theodore Rinehart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>RINEHART ENGINEERING</h1>
+
+        <div class="upload-container">
+            <div class="upload-section">
+                <h2>Cargar Empleados</h2>
+                <input type="file" id="file-input-employees" class="file-input">
+            </div>
+            <div class="upload-section">
+                <h2>Cargar Productos</h2>
+                <input type="file" id="file-input-products" class="file-input">
+            </div>
+        </div>
+
+        <div class="search-section">
+            <h2>Empleado</h2>
+            <input type="text" id="employee-number" class="input-field" placeholder="Número de empleado">
+            <button class="btn" onclick="verifyEmployee()">Buscar</button>
+            <p id="employee-name" class="result"></p>
+        </div>
+
+        <div class="product-section">
+            <h2>Buscar Producto</h2>
+            <input type="text" id="product-search" class="input-field" placeholder="Buscar por nombre o código de barras">
+            <button class="btn" onclick="searchProduct()">Buscar</button>
+            <select id="product-select" class="product-select" size="10"></select>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn" onclick="addSale()">Añadir Venta</button>
+            <button class="btn" onclick="saveSales()">Guardar Ventas</button>
+        </div>
+    </div>
+</body>
+</html>
